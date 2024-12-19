@@ -56,28 +56,28 @@
 
         ext {
             bindings = <
-&kp TILDE             &kp F1                &kp F2           &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6     &kp F7    &kp F8      &kp F9     &kp F10           &trans
-&trans                &trans                &mkp LCLK        &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP  &kp END   &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans                &trans                &rgb_ug RGB_TOG  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN  &kp LEFT  &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &trans     &trans    &kp INSERT  &trans     &kp F11           &kp F12
-&kp C_MUTE            &trans                &trans           &trans           &trans           &trans             &mkp LCLK        &trans     &trans    &kp RCTRL   &kp RALT   &trans
+&kp TILDE   &kp F1  &kp F2     &kp F3         &kp F4     &kp F5      &mmv MOVE_UP     &kp F6  &kp F7    &kp F8      &kp F9     &kp F10           &trans
+&trans      &trans  &mkp LCLK  &mkp MCLK      &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &trans  &trans    &kp UP      &trans     &kp MINUS         &kp EQUAL
+&trans      &trans  &kp HOME   &kp PAGE_UP    &trans     &mkp MB5    &mmv MOVE_LEFT   &trans  &kp LEFT  &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &trans  &kp END    &kp PAGE_DOWN  &trans     &trans      &mmv MOVE_RIGHT  &trans  &trans    &kp INSERT  &trans     &kp F11           &kp F12
+&kp C_MUTE  &trans  &trans     &trans         &trans     &trans      &mkp LCLK        &trans  &trans    &kp RCTRL   &kp RALT   &trans
             >;
 
             display-name = "ext";
             sensor-bindings = <&scroll_encoder>;
         };
 
-        system {
+        sys {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &trans  &trans  &trans      &trans     &trans       &trans
-&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &trans      &trans     &trans       &trans
-&trans  &out OUT_TOG  &trans          &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &trans       &trans
-&trans  &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans  &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4            &mmv MOVE_UP     &rgb_ug RGB_TOG  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans     &trans       &trans
+&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans                &trans                  &mmv MOVE_DOWN   &rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans     &trans       &trans
+&trans  &out OUT_TOG  &trans          &trans        &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_DEC    &mmv MOVE_LEFT   &trans           &trans           &trans           &trans     &trans       &trans
+&trans  &sys_reset    &trans          &bootloader   &trans                &trans                  &mmv MOVE_RIGHT  &trans           &trans           &sys_reset       &soft_off  &bootloader  &trans
+&trans  &trans        &trans          &trans        &trans                &trans                  &mkp LCLK        &trans           &trans           &trans           &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
-            label = "system";
+            label = "sys";
         };
     };
 };
