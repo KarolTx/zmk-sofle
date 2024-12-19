@@ -1,7 +1,6 @@
 # zmk-config-sofle
 
-Following tutorial is taken form a similar [repo](https://github.com/ergomechstore/sofle-v2-oled-zmk).
-<img src="keymap-drawer/sofle.svg" >
+Following tutorial is taken from a similar [repo](https://github.com/ergomechstore/sofle-v2-oled-zmk).
 
 ## Default keymap
 The default keymap of this keyboard can be found here:
